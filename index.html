@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С ДНЁМ РОЖДЕНИЯ, ОЛЕСЯ!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <header>
+        <h1>💖 С ДНЁМ РОЖДЕНИЯ, ОЛЕСЯ 💖</h1>
+        <h2>Желаем здоровья, радости и веселья!</h2>
+    </header>
+
+    <section class="videos">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/oq2TpLhIcUc?list=RDoq2TpLhIcUc" title="ШАНСОН на День Рождения – душевно до слёз" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/DVLoNhu83iA?list=RDDVLoNhu83iA" title="С Днем Рождения Замечательная песня поздравление Музыкальная открытка" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="flowers">
+        <h2>🥀🌹🪷💮🌸💐🌺🌻🌼🌷🪻 Будь прекрасна как эти цветы!</h2>
+        <button class="btn">🎉 С ДНЁМ РОЖДЕНИЯ! 🎉</button>
+        <button class="btn">💫 Желаем радости и веселья! 💫</button>
+        <button class="btn">😄</button>
+    </section>
+
+    <!-- 🌸 МНОГО ЦВЕТОВ -->
+    <div class="falling-flowers">
+        <!-- 100 цветков -->
+        <script>
+            const emojis = ["🌸", "🌹", "🌷", "💐", "🌺", "🌻", "🌼", "🪻"];
+            for (let i = 0; i < 100; i++) {
+                const flower = document.createElement("div");
+                flower.classList.add("flower");
+                flower.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                flower.style.left = Math.random() * 100 + "vw";
+                flower.style.animationDuration = 5 + Math.random() * 10 + "s";
+                flower.style.fontSize = 20 + Math.random() * 20 + "px";
+                flower.style.animationDelay = Math.random() * 10 + "s";
+                document.body.appendChild(flower);
+            }
+        </script>
+    </div>
+
+    <footer>
+        <p>с любовью от Ильи, Арсения, и Вали</p>
+    </footer>
+
+</body>
+</html>
